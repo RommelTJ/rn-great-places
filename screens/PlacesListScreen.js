@@ -9,6 +9,10 @@ const PlacesListScreen = (props) => {
   );
 };
 
+PlacesListScreen.navigationOptions = {
+  headerTitle: "All Places"
+};
+
 const styles = StyleSheet.create({});
 
 export default PlacesListScreen;
