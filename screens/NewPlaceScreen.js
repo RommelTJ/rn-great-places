@@ -1,11 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextInput, ScrollView, Button } from "react-native";
+import Colors from "../constants/Colors";
 
 const NewPlaceScreen = (props) => {
   return (
-    <View>
-      <Text>New Place Screen</Text>
-    </View>
+    <ScrollView>
+      <View>
+        <Text>Title</Text>
+        <TextInput />
+        <Button title="Save Place" color={Colors.primary} onPress={() => {}} />
+      </View>
+    </ScrollView>
   );
 };
 
