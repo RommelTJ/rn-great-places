@@ -9,12 +9,14 @@ const NewPlaceScreen = (props) => {
     setTitle(text);
   };
 
+  const savePlaceHandler = () => {};
+
   return (
     <ScrollView>
       <View style={styles.form}>
         <Text style={styles.label} >Title</Text>
         <TextInput style={styles.textInput} onChangeText={titleChangeHandler} value={title} />
-        <Button title="Save Place" color={Colors.primary} onPress={() => {}} />
+        <Button title="Save Place" color={Colors.primary} onPress={savePlaceHandler} />
       </View>
     </ScrollView>
   );
