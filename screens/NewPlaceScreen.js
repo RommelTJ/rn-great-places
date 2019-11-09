@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, ScrollView, Button } from "react-native";
 import Colors from "../constants/Colors";
+import { useDispatch } from "react-redux";
+import * as placesActions from "../store/placesActions";
 
 const NewPlaceScreen = (props) => {
   const [title, setTitle] = useState('');
+
+  const dispatch = useDispatch();
 
   const titleChangeHandler = (text) => {
     setTitle(text);
   };
 
-  const savePlaceHandler = () => {};
+  const savePlaceHandler = () => {
+    dispatch(placesActions.addPlace(title));
+  };
 
   return (
     <ScrollView>
