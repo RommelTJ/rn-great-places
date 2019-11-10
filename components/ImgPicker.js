@@ -3,7 +3,7 @@ import { View, Button, Text, StyleSheet, Image } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import Colors from "../constants/Colors";
 
-const ImagePicker = (props) => {
+const ImgPicker = (props) => {
 
   const takeImageHandler = () => {};
 
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ImagePicker;
+export default ImgPicker;
