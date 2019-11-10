@@ -5,7 +5,9 @@ import Colors from "../constants/Colors";
 
 const ImgPicker = (props) => {
 
-  const takeImageHandler = () => {};
+  const takeImageHandler = () => {
+    ImagePicker.launchCameraAsync({});
+  };
 
   return (
     <View style={styles.imagePicker} >
