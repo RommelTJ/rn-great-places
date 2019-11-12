@@ -22,7 +22,11 @@ const ImgPicker = (props) => {
   const takeImageHandler = async () => {
     const hasPermission = await verifyPermissions();
     if (!hasPermission) return;
-    ImagePicker.launchCameraAsync({});
+    ImagePicker.launchCameraAsync({
+      allowsEditing: true,
+      aspect: [16, 9],
+      quality: 0.5
+    });
   };
 
   return (
