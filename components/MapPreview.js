@@ -4,7 +4,7 @@ import ENV from "../env";
 
 const MapPreview = (props) => {
   let imagePreviewUrl;
-  if (props.location) imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${props.location.lat},${props.location.lon}&zoom=14&size=400x200&maptype=roadmap&markers=color:red%7Clabel:A%7C${props.location.lat},${props.location.lon}&key=${ENV.googleApiKey}`;
+  if (props.location) imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${props.location.lat},${props.location.lon}&zoom=14&size=400x200&maptype=roadmap&markers=color:red%7Clabel:A%7C${props.location.lat},${props.location.lon}&key=${ENV().googleApiKey}`;
   return (
     <View style={{...styles.mapPreview, ...props.style}}>
       {
