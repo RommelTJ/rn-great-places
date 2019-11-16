@@ -28,8 +28,7 @@ const LocationPicker = (props) => {
     try {
       setIsFetching(true);
       const location = await Location.getCurrentPositionAsync({timeout: 5000});
-      console.log(location);
-      setPickedLocation(null);
+      setPickedLocation({lat: location.coords.latitude, lon: location.coords.longitude});
     } catch (err) {
       Alert.alert(
         'Could not fetch location!',
