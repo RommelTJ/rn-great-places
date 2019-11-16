@@ -62,7 +62,9 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 150,
     borderColor: '#CCC',
-    borderWidth: 1
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 
