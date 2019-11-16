@@ -1,4 +1,4 @@
-import {ADD_PLACE} from "./placesActions";
+import {ADD_PLACE, SET_PLACES} from "./placesActions";
 import Place from "../models/place";
 
 const initialState = {
@@ -14,6 +14,8 @@ export default (state = initialState, action) => {
         action.placeData.image
       );
       return {places: state.places.concat(place)};
+    case SET_PLACES:
+      return {places: action.places.map(p => new Place(p.id.toString(), p.title, p.imageUri))};
     default:
       return state;
   }
