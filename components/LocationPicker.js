@@ -51,7 +51,7 @@ const LocationPicker = (props) => {
             : <Text>No location chosen yet!</Text>
         }
       </MapPreview>
-      <View>
+      <View style={styles.actions}>
         <Button title="Get User Location" color={Colors.primary} onPress={getLocationHandler} />
         <Button title="Pick on Map" color={Colors.primary} onPress={pickOnMapHandler} />
       </View>
@@ -69,6 +69,11 @@ const styles = StyleSheet.create({
     height: 150,
     borderColor: '#CCC',
     borderWidth: 1
+  },
+  actions: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: "100%"
   }
 });
 
