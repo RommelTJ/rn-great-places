@@ -40,11 +40,13 @@ const LocationPicker = (props) => {
     setIsFetching(false);
   };
 
-  const pickOnMapHandler = () => {};
+  const pickOnMapHandler = () => {
+    props.navigation.navigate("Map");
+  };
 
   return (
     <View style={styles.locationPicker}>
-      <MapPreview style={styles.mapPreview} location={pickedLocation} >
+      <MapPreview style={styles.mapPreview} location={pickedLocation} onPress={pickOnMapHandler} >
         {
           isFetching
             ? <ActivityIndicator size="large" color={Colors.primary} />
