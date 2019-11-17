@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
       );
       return {places: state.places.concat(place)};
     case SET_PLACES:
-      return {places: action.places.map(p => new Place(p.id.toString(), p.title, p.imageUri))};
+      return {places: action.places.map(p => new Place(p.id.toString(), p.title, p.imageUri, p.address, p.lat, p.lon))};
     default:
       return state;
   }
