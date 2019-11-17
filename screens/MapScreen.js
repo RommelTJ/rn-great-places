@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import { StyleSheet, Text, TouchableOpacity, Platform } from 'react-native';
 import Colors from "../constants/Colors";
@@ -20,6 +20,14 @@ const MapScreen = (props) => {
     })
   };
 
+  const savePickedLocationHandler = useCallback(() => {
+    props.navigation.goBack();
+  }, []);
+
+  useEffect(() => {
+    props.navigation.setParams({saveLocation: savePickedLocationHandler});
+  }, [savePickedLocationHandler]);
+
   let markerCoordinates;
   if (selectedLocation) markerCoordinates = {
     latitude: selectedLocation.lat,
@@ -34,9 +42,10 @@ const MapScreen = (props) => {
 };
 
 MapScreen.navigationOptions = (navData) => {
+  const saveLocation = navData.navigation.getParam("saveLocation");
   return {
     headerRight: (
-      <TouchableOpacity style={styles.headerButton} onPress={() => {}}>
+      <TouchableOpacity style={styles.headerButton} onPress={saveLocation}>
         <Text style={styles.headerButtonText}>Save</Text>
       </TouchableOpacity>
     )
