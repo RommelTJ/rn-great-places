@@ -1,6 +1,6 @@
 import React from 'react';
 import MapView from 'react-native-maps';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const MapScreen = (props) => {
   const mapRegion = {
@@ -10,13 +10,13 @@ const MapScreen = (props) => {
     longitudeDelta: 0.0421
   };
 
-  return (
-    <MapView
-      region={mapRegion}
-    />
-  );
+  return <MapView style={styles.map} region={mapRegion}/>;
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  map: {
+    flex: 1
+  }
+});
 
 export default MapScreen;
