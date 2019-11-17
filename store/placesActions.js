@@ -9,8 +9,7 @@ export const addPlace = (title, image, location) => {
   return async (dispatch) => {
     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.lat},${location.lon}&key=${ENV().googleApiKey}`);
     if (!response.ok) throw new Error("Something went wrong!");
-    const responseData = response.json();
-    console.log("responseData", responseData);
+    const responseData = await response.json();
 
     const fileName = image.split('/').pop();
     const newPath = FileSystem.documentDirectory + fileName;
