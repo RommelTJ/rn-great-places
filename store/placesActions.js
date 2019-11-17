@@ -14,12 +14,11 @@ export const addPlace = (title, image, location) => {
     if (!responseData.results) throw new Error("Something went wrong!");
     const address = responseData.results[0].formatted_address;
 
-
     const fileName = image.split('/').pop();
     const newPath = FileSystem.documentDirectory + fileName;
     try {
       await FileSystem.moveAsync({from: image, to: newPath});
-      const dbResult = await insertPlace(title, newPath, 'Dummy address', 15.6, 12.3);
+      const dbResult = await insertPlace(title, newPath, address, 15.6, 12.3);
       return { type: ADD_PLACE, placeData: { id: dbResult.insertId, title, newPath } };
     } catch (err) {
       console.log(err);
