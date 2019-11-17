@@ -9,7 +9,7 @@ const PlaceDetailScreen = (props) => {
   const selectedPlace = useSelector((state) => state.places.places.find(p => p.id === placeId));
 
   return (
-    <ScrollView>
+    <ScrollView contentContainerStyle={{alignItems: "center"}} >
       <Image source={{uri: selectedPlace.imageUri}} style={styles.image} />
       <View style={styles.locationContainer} >
         <View style={styles.addressContainer}>
