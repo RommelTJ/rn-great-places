@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MapView, { Marker } from 'react-native-maps';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Platform } from 'react-native';
+import Colors from "../constants/Colors";
 
 const MapScreen = (props) => {
   const [selectedLocation, setSelectedLocation] = useState(undefined);
@@ -32,9 +33,26 @@ const MapScreen = (props) => {
   );
 };
 
+MapScreen.navigationOptions = (navData) => {
+  return {
+    headerRight: (
+      <TouchableOpacity style={styles.headerButton} onPress={() => {}}>
+        <Text style={styles.headerButtonText}>Save</Text>
+      </TouchableOpacity>
+    )
+  };
+};
+
 const styles = StyleSheet.create({
   map: {
     flex: 1
+  },
+  headerButton: {
+    marginHorizontal: 20
+  },
+  headerButtonText: {
+    fontSize: 16,
+    color: Platform.OS === "android" ? "white" : Colors.primary
   }
 });
 
