@@ -4,7 +4,7 @@ import { insertPlace, fetchPlaces } from "../helpers/db";
 export const ADD_PLACE = "ADD_PLACE";
 export const SET_PLACES = "SET_PLACES";
 
-export const addPlace = (title, image) => {
+export const addPlace = (title, image, location) => {
   return async (dispatch) => {
     const fileName = image.split('/').pop();
     const newPath = FileSystem.documentDirectory + fileName;
