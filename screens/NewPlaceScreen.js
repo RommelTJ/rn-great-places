@@ -9,6 +9,7 @@ import LocationPicker from "../components/LocationPicker";
 const NewPlaceScreen = (props) => {
   const [title, setTitle] = useState('');
   const [selectedImage, setSelectedImage] = useState(undefined);
+  const [selectedLocation, setSelectedLocation] = useState(undefined);
 
   const dispatch = useDispatch();
 
@@ -17,7 +18,7 @@ const NewPlaceScreen = (props) => {
   };
 
   const savePlaceHandler = () => {
-    dispatch(placesActions.addPlace(title, selectedImage));
+    dispatch(placesActions.addPlace(title, selectedImage, selectedLocation));
     props.navigation.goBack();
   };
 
@@ -26,7 +27,7 @@ const NewPlaceScreen = (props) => {
   };
 
   const locationPickedHandler = useCallback((location) => {
-    console.log("location: ", location);
+    setSelectedLocation(location);
   }, []);
 
   return (
