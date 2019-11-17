@@ -40,6 +40,8 @@ const LocationPicker = (props) => {
     setIsFetching(false);
   };
 
+  const pickOnMapHandler = () => {};
+
   return (
     <View style={styles.locationPicker}>
       <MapPreview style={styles.mapPreview} location={pickedLocation} >
@@ -49,7 +51,10 @@ const LocationPicker = (props) => {
             : <Text>No location chosen yet!</Text>
         }
       </MapPreview>
-      <Button title="Get User Location" color={Colors.primary} onPress={getLocationHandler} />
+      <View>
+        <Button title="Get User Location" color={Colors.primary} onPress={getLocationHandler} />
+        <Button title="Pick on Map" color={Colors.primary} onPress={pickOnMapHandler} />
+      </View>
     </View>
   );
 };
