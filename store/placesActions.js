@@ -18,7 +18,7 @@ export const addPlace = (title, image, location) => {
     const newPath = FileSystem.documentDirectory + fileName;
     try {
       await FileSystem.moveAsync({from: image, to: newPath});
-      const dbResult = await insertPlace(title, newPath, address, 15.6, 12.3);
+      const dbResult = await insertPlace(title, newPath, address, location.lat, location.lon);
       return { type: ADD_PLACE, placeData: { id: dbResult.insertId, title, newPath } };
     } catch (err) {
       console.log(err);
