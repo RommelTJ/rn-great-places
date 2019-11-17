@@ -11,7 +11,10 @@ export default (state = initialState, action) => {
       const place = new Place(
         action.placeData.id.toString(),
         action.placeData.title,
-        action.placeData.image
+        action.placeData.image,
+        action.placeData.address,
+        action.placeData.coords.lat,
+        action.placeData.coords.lon
       );
       return {places: state.places.concat(place)};
     case SET_PLACES:
