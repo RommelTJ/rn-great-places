@@ -19,7 +19,21 @@ export const addPlace = (title, image, location) => {
     try {
       await FileSystem.moveAsync({from: image, to: newPath});
       const dbResult = await insertPlace(title, newPath, address, location.lat, location.lon);
-      return { type: ADD_PLACE, placeData: { id: dbResult.insertId, title, newPath } };
+      dispatch(
+        {
+          type: ADD_PLACE,
+          placeData: {
+            id: dbResult.insertId,
+            title,
+            newPath,
+            address,
+            coords: {
+              lat: location.lat,
+              lon: location.lon
+            }
+          }
+        }
+      );
     } catch (err) {
       console.log(err);
       throw err;
