@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Romza Great Places",
+    "description": "Romza app for cataloging great places all over the world.",
     "slug": "romza-great-places",
     "privacy": "public",
     "sdkVersion": "35.0.0",
