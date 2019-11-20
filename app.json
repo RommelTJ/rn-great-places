@@ -30,7 +30,12 @@
       "adaptiveIcon": {
         "foregroundImage":  "./assets/places-adaptive.png",
         "backgroundColor": "#171717"
-      }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     }
   }
 }
