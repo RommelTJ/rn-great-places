@@ -25,6 +25,7 @@
     ],
     "ios": {
       "bundleIdentifier": "com.romzalabs.romza-great-places",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
