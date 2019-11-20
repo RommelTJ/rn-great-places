@@ -40,9 +40,7 @@
         "CAMERA",
         "WRITE_EXTERNAL_STORAGE"
       ],
-      "googleMaps": {
-        "apiKey": "REDACTED"
-      }
+      "googleMapsApiKey": "REDACTED"
     }
   }
 }
