@@ -27,6 +27,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.romzalabs.romza-great-places",
       "adaptiveIcon": {
         "foregroundImage":  "./assets/places-adaptive.png",
         "backgroundColor": "#171717"
