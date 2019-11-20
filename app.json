@@ -1,21 +1,21 @@
 {
   "expo": {
-    "name": "Great Places",
-    "slug": "rn-great-places",
+    "name": "Romza Great Places",
+    "description": "Romza app for cataloging great places all over the world.",
+    "slug": "romza-great-places",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/places.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#171717"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -24,7 +24,27 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.romzalabs.romzagreatplaces",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.romzalabs.romzagreatplaces",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage":  "./assets/places-adaptive.png",
+        "backgroundColor": "#171717"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "REDACTED"
+        }
+      }
     }
   }
 }
