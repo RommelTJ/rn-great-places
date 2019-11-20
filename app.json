@@ -24,12 +24,12 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.romzalabs.romza-great-places",
+      "bundleIdentifier": "com.romzalabs.romzagreatplaces",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.romzalabs.romza-great-places",
+      "package": "com.romzalabs.romzagreatplaces",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage":  "./assets/places-adaptive.png",
