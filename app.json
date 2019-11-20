@@ -24,6 +24,7 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.romzalabs.romza-great-places",
       "supportsTablet": true
     },
     "android": {
