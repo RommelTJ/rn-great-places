@@ -30,6 +30,7 @@
     },
     "android": {
       "package": "com.romzalabs.romza-great-places",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage":  "./assets/places-adaptive.png",
         "backgroundColor": "#171717"
